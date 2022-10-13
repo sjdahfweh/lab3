@@ -11,8 +11,8 @@ class ListExamples {
   static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
-      if(sc.checkString(s)) {
-        result.add(0, s);
+      if(sc.checkString(s) == true) {
+        result.add(s);
       }
     }
     return result;
@@ -46,4 +46,11 @@ class ListExamples {
   }
 
 
+}
+
+class Mychecker implements StringChecker{
+  @Override
+  public boolean checkString(String s){
+      return s.length()>5;
+  }
 }
