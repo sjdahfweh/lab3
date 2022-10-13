@@ -13,6 +13,7 @@ public class ArrayExamples {
   // order
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
+    newArray = arr.clone();
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = newArray[arr.length - i - 1];
     }
