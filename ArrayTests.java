@@ -31,9 +31,9 @@ public class ArrayTests {
 
   @Test 
 	public void testAvergebutthelowest() {
-    double[] input1 = { 10,9,1,1,1 };
+    double[] input1 = { 3, 2,1,1,1 };
     double a = ArrayExamples.averageWithoutLowest(input1);
-    double expected = 5.25;
-    assertEquals(expected, a,0.1);
+    double expected = 1.5;
+    assertEquals(expected, a,0);
 	}
 }

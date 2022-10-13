@@ -8,7 +8,7 @@ class ListExamples {
   // Returns a new list that has all the elements of the input list for which
   // the StringChecker returns true, and not the elements that return false, in
   // the same order they appeared in the input list;
-  static List<String> filter(List<String> list, StringChecker sc) {
+  List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s) == true) {
@@ -48,7 +48,7 @@ class ListExamples {
 
 }
 
-class Mychecker implements StringChecker{
+class LongWordChooser implements StringChecker{
   @Override
   public boolean checkString(String s){
       return s.length()>5;
